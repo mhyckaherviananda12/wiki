@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Menghindari scroll di halaman utama */
+}
+
+/* Container */
+.container {
+    width: 400px;
+    height: 600px; /* Tentukan tinggi agar ada batas */
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background: #4caf50;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 2px solid #3e8e41;
+}
+
+/* Chat Box */
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: calc(100% - 130px); /* Membuat chat box terbatas */
+}
+
+.message {
+    max-width: 75%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.message.bot {
+    background: #e3f7df;
+    align-self: flex-start;
+    color: #2d6a4f;
+    border: 1px solid #c3e6cb;
+}
+
+.message.user {
+    background: #dbeafe;
+    align-self: flex-end;
+    color: #1e40af;
+    border: 1px solid #b3d4fc;
+}
+
+/* Input Box */
+.input-box {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+}
+
+input:focus {
+    border-color: #4caf50;
+}
+
+button {
+    margin-left: 10px;
+    padding: 12px 18px;
+    background: #4caf50;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* Scrollbar Styling */
+.chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: #9ca3af;
+    border-radius: 8px;
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
